@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ubicación - Granizados El Capi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header small">
+    <div class="brand">
+      <img src="img/capibara-logo.jpg" alt="Granizados El Capi Logo" class="logo">
+      <div class="titles">
+        <h1>Granizados El Capi</h1>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-btn">Inicio</a>
+      <a href="sabores.html" class="nav-btn">Sabores</a>
+      <a href="ubicacion.html" class="nav-btn active">Ubicación</a>
+      <a href="contacto.html" class="nav-btn">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="ubic">
+      <h2>Encuéntranos</h2>
+      <p style="font-size: 20px; font-weight: 500; margin-bottom: 16px;">📍 Cra. 13 #8 – 38, Villanueva, Casanare</p>
+      <p style="font-size: 18px; color: var(--text-muted); margin-bottom: 48px;">
+        🏛️ Nos encontramos al frente del parque principal, al lado de la iglesia
+      </p>
+
+      <div class="location-images">
+        <div class="location-card">
+          <img src="img/local.jpg" alt="Local Granizados El Capi" class="location-img">
+          <div class="location-label">
+            <svg class="location-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <span>Nuestro Local</span>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <img src="img/mapa.jpg" alt="Mapa de ubicación Villanueva" class="location-img">
+          <div class="location-label">
+            <svg class="location-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <span>Cómo llegar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="directions-box">
+        <h3>🗺️ Cómo llegar</h3>
+        <p>Dirígete al parque principal de Villanueva. Estamos justo en frente del parque, al lado de la iglesia. ¡No tiene pérdida!</p>
+      </div>
+
+      <h3>Cuéntanos sobre tu visita</h3>
+      <form id="ubicForm" class="form-card">
+        <label for="u-nombre">Nombre</label>
+        <input id="u-nombre" type="text" placeholder="Tu nombre" required>
+        
+        <label for="u-coment">Comentario sobre tu visita</label>
+        <textarea id="u-coment" rows="4" placeholder="¿Cómo fue tu experiencia?" required></textarea>
+        
+        <button type="submit" class="primary">Enviar comentario</button>
+      </form>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true" onclick="closeModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <h3 style="color: var(--text-primary); font-size: 24px; margin-bottom: 12px; font-weight: 600;">¡Comentario Recibido!</h3>
+      <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
+        Gracias por compartir tu experiencia. Nos alegra que nos hayas visitado.
+      </p>
+      <button onclick="closeModal()" class="primary" style="width: 100%;">
+        Entendido
+      </button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2025 Granizados El Capi. Todos los derechos reservados.</p>
+    <p style="margin-top: 8px; font-size: 13px;">📍 Cra. 13 #8 – 38, Villanueva, Casanare | 📞 +57 322 704 8379</p>
+  </footer>
+</body>
+</html>
